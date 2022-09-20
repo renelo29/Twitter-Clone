@@ -33,6 +33,14 @@
            {% if post.image.url %}
            <img src="{{ post.image.url }}" width="100%" alt="" class="post-image">
            {% endif %}
+
+           <form action="{% url 'like' post.pk %}" method="POST" id="likes-form">
+            {% csrf_token %}
+            <div class="row">
+              <button class="like-button" type="submit", name="post_id", value="{{ post.id }}">&#10084;</button>
+              {{post.likecount}}
+            </div>
+           </form>
            </div>
        </li> 
        {% endfor %}
