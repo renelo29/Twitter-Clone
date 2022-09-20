@@ -126,3 +126,6 @@ img.twitter_image {
       border: none;
       border-radius: 6px;
   }
+  .post-image {
+      height: 50vh;
+    }
